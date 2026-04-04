@@ -20,8 +20,7 @@ const projects = [
   {
     title: "Simple Portfolio-2",
     description:
-      "A completely designed web project using HTML, CSS, and JavaScript that showcases interactive features, responsive layouts, and real-world front-end development experience.
-.",
+      "A completely designed web project using HTML, CSS, and JavaScript that showcases interactive features, responsive layouts, and real-world front-end development experience.",
     image: "/projects/Porfolio 2.png",
     link: "https://johnlester0.github.io/Simple-Portfolio-Html-Css-Javascript-/",
     github: "https://github.com/JohnLester0/Simple-Portfolio-Html-Css-Javascript-.git",
