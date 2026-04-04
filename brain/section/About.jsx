@@ -28,7 +28,7 @@ export const About = () => {
               <span className="text-primary glow-text block text-2xl lg:text-3xl font-bold mt-2">
                 Western Institute of Technology
                 <br />
-                Lapaz, Iloilo City.
+               in Lapaz, Iloilo City.
               </span>
             </h2>
           </div>
