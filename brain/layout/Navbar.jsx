@@ -34,7 +34,7 @@ export const Navbar = () => {
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-         John Lester-<span className="text-primary">Porfolio</span>
+         John Lester - <span className="text-primary">Porfolio</span>
         </a>
 
         {/* Desktop Nav */}
