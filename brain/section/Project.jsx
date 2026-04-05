@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Awesome Todos App",
     description:
-      "Project awesometodos web school project.",
+      "A full-stack task management application utilizing a separated client-server architecture, with a streamlined UI and robust data persistence.",
     image: "/projects/Awesometodos.png",
     link: "https://awesometodosapp-ab74.onrender.com",
     github: "https://github.com/JohnLester0/awesometodosapp.git",
@@ -13,14 +13,14 @@ const projects = [
   {
     title: "Dagyang Presentation",
     description:
-      "Dagyang  Creating planned itinerary for tourists to fully enjoy their stay.",
+      "Dagyang  Creating planned itinerary for tourists to fully enjoy their stay at Iloilo Provinces.",
     image: "/projects/Dagyang.png",
     link: "https://www.figma.com/design/ZXNYtHP4xr19yfq4eaGczn/Dagyang-App---PitchDeck?node-id=0-1&t=VP64FIVv2PpOd7ox-0",
   },
   {
     title: "Simple Portfolio-2",
     description:
-      "Option 2 for portfolio project.",
+      "A completely designed web project using HTML, CSS, and JavaScript that showcases interactive features, responsive layouts, and real-world front-end development experience.",
     image: "/projects/Porfolio 2.png",
     link: "https://johnlester0.github.io/Simple-Portfolio-Html-Css-Javascript-/",
     github: "https://github.com/JohnLester0/Simple-Portfolio-Html-Css-Javascript-.git",
@@ -28,7 +28,7 @@ const projects = [
   {
     title: "Product Design",
     description:
-      "Nanyang Shoes",
+      "A nanyang Shoes Product Showcase: An attracting platform created to showcase the newest Nanyang shoe collections,emphasizing their style, quality, and design for both consumers and enthusiasts.",
     image: "/projects/Product Design.png",
     link: "https://www.figma.com/design/Sdj8TMFP1tx1bPu1ByVqoH/Untitled?t=Og8SovH69qM8yMBp-1",
   },
