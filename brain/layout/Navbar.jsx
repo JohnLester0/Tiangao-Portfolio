@@ -34,7 +34,7 @@ export const Navbar = () => {
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-         ITPC - 4 <span className="text-primary">2026</span>
+         John Lester-<span className="text-primary">Porfolio</span>
         </a>
 
         {/* Desktop Nav */}
