@@ -72,7 +72,7 @@ export const Skills = () => {
             My Skills
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Technologies I{" "}
+            Technologies & Tools I{" "}
             <span className="font-serif italic font-normal text-white">
               used in my Studies
             </span>
