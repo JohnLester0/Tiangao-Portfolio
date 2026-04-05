@@ -15,7 +15,6 @@ const projects = [
     description:
       "Dagyang  Creating planned itinerary for tourists to fully enjoy their stay.",
     image: "/projects/Dagyang.png",
-   github: "#",
     link: "https://www.figma.com/design/ZXNYtHP4xr19yfq4eaGczn/Dagyang-App---PitchDeck?node-id=0-1&t=VP64FIVv2PpOd7ox-0",
   },
   {
