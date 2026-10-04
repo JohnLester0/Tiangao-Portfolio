@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
   <rect width="64" height="64" rx="16" fill="#0f1418" />
-  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#20b2a6" stroke-width="2" stroke-opacity="0.4" />
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#20b2a6" stroke-width="2" stroke-opacity="0.6" />
   
   <!-- Stylized JT Monogram with code brackets -->
   <path d="M14 26 L8 32 L14 38" stroke="#20b2a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
