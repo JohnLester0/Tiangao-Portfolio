@@ -1,6 +1,5 @@
 import { Mail } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/BrandIcons";
-import { ScrollReveal } from "@/components/ScrollReveal";
 
 const socialLinks = [
   {
@@ -20,38 +19,20 @@ const socialLinks = [
   },
 ];
 
-const footerLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
-];
-
 export const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="py-12 border-t border-border">
-      <ScrollReveal className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="text-center md:text-left">
-            <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} John Lester Tiangao. All rights reserved.
-            </p>
-          </div>
+    <footer className="py-8 border-t border-border/40">
+      <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Copyright */}
+        <p className="text-xs text-muted-foreground">
+          © 2026 John Lester Tiangao. All rights reserved.
+        </p>
 
-          <nav className="flex flex-wrap justify-center gap-6">
-            {footerLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
+        {/* Follow Me */}
+        <div className="flex items-center gap-3">
+          <span className="text-xs font-semibold uppercase tracking-wider text-secondary-foreground">
+            Follow Me:
+          </span>
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
               <a
@@ -59,15 +40,15 @@ export const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={social.label}
-                className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+                className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors duration-200"
               >
-                <social.icon className="w-5 h-5" />
+                <social.icon className="w-3.5 h-3.5 text-primary/80" />
+                <span>{social.label}</span>
               </a>
             ))}
           </div>
         </div>
-      </ScrollReveal>
+      </div>
     </footer>
   );
 };

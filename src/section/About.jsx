@@ -82,13 +82,7 @@ export const About = () => {
                 <ArrowRight className="w-4 h-4" />
               </a>
 
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-primary/40 text-foreground font-semibold text-sm hover:bg-primary/10 hover:border-primary active:scale-95 transition-all duration-200"
-              >
-                Contact Me
-                <Mail className="w-4 h-4 text-primary" />
-              </a>
+      
             </div>
           </ScrollReveal>
 
@@ -100,15 +94,8 @@ export const About = () => {
             <div className="glass p-6 md:p-8 rounded-3xl lg:rounded-[2rem] shadow-xl border border-white/[0.06] bg-surface/90 backdrop-blur-md hover:border-primary/30 hover:shadow-[0_0_30px_rgba(32,178,170,0.16)] transition-all duration-300">
               <div className="flex items-center gap-4 pb-6 border-b border-white/[0.06]">
                 <div className="relative flex-shrink-0">
-                  <img
-                    src="/profile.jpg"
-                    alt="John Lester Tiangao"
-                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl object-cover ring-2 ring-primary/40 shadow-lg"
-                  />
-                  <span
-                    className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-surface ring-1 ring-emerald-400/40"
-                    title="Available for opportunities"
-                  />
+              
+                 
                 </div>
 
                 <div className="min-w-0">
@@ -117,7 +104,7 @@ export const About = () => {
                   </h3>
                   <div className="flex items-center gap-2 text-xs sm:text-sm text-primary font-medium mt-0.5">
                     <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
-                    <span>2nd Year IT Student & UX Enthusiast</span>
+                    <span>3nd Year IT Student & UX Enthusiast</span>
                   </div>
                 </div>
               </div>
@@ -144,14 +131,6 @@ export const About = () => {
                   </motion.div>
                 ))}
               </motion.div>
-
-              <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-surface/50 border border-white/[0.05] relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
-                <p className="text-[#B8C0CC] text-sm sm:text-base leading-relaxed pl-2 italic">
-                  “I'm passionate about UX design and always eager to learn and
-                  improve my craft.”
-                </p>
-              </div>
             </div>
           </ScrollReveal>
         </div>
