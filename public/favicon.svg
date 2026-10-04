@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#0f1418" />
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#20b2a6" stroke-width="2" stroke-opacity="0.4" />
+  
+  <!-- Stylized JT Monogram with code brackets -->
+  <path d="M14 26 L8 32 L14 38" stroke="#20b2a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M50 26 L56 32 L50 38" stroke="#20b2a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <text x="32" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#f0f2f5" text-anchor="middle" letter-spacing="1">
+    J<tspan fill="#20b2a6">T</tspan>
+  </text>
+  
+  <circle cx="48" cy="18" r="2.5" fill="#20b2a6" />
+</svg>
