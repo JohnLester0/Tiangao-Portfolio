@@ -22,14 +22,14 @@ const socialLinks = [
 export const Footer = () => {
   return (
     <footer className="py-8 border-t border-border/40">
-      <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
         {/* Copyright */}
         <p className="text-xs text-muted-foreground">
           © 2026 John Lester Tiangao. All rights reserved.
         </p>
 
         {/* Follow Me */}
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-3">
           <span className="text-xs font-semibold uppercase tracking-wider text-secondary-foreground">
             Follow Me:
           </span>

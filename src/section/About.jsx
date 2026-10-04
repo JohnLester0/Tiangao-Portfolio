@@ -34,8 +34,8 @@ const cardItemVariants = {
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 md:py-32 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="about" className="py-20 md:py-32 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <ScrollReveal direction="left" className="space-y-6">
             <div>
@@ -104,7 +104,7 @@ export const About = () => {
                   </h3>
                   <div className="flex items-center gap-2 text-xs sm:text-sm text-primary font-medium mt-0.5">
                     <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
-                    <span>3nd Year IT Student & UX Enthusiast</span>
+                    <span>3rd Year IT Student & UX Enthusiast</span>
                   </div>
                 </div>
               </div>

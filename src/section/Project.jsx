@@ -42,22 +42,22 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-32 relative overflow-hidden">
+    <section id="projects" className="py-20 md:py-32 relative overflow-hidden">
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <ScrollReveal className="text-center mx-auto max-w-3xl mb-16">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <ScrollReveal className="text-center mx-auto max-w-3xl mb-12 md:mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
             Featured Work
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-secondary-foreground">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 text-secondary-foreground">
             Projects that{" "}
             <span className="font-serif italic font-normal text-white">
               make an impact.
             </span>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-sm sm:text-base">
             A selection of my recent work, from complex web applications to
             innovative tools that solve real-world problems.
           </p>
@@ -105,12 +105,17 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                <div className="p-5 sm:p-6 space-y-4 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
                     <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
-                        {project.title}
-                      </h3>
+                      <a
+                        href={project.link || project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-lg sm:text-xl font-semibold hover:text-primary group-hover:text-primary transition-colors flex items-center gap-1.5"
+                      >
+                        <span>{project.title}</span>
+                      </a>
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all flex-shrink-0" />
                     </div>
                     <p className="text-muted-foreground text-sm leading-relaxed">

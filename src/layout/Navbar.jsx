@@ -63,10 +63,10 @@ export const Navbar = () => {
         style={{ scaleX }}
       />
 
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
         <a
           href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary transition-colors outline-none focus-visible:ring-1 focus-visible:ring-primary rounded-lg"
+          className="text-lg sm:text-xl font-bold tracking-tight hover:text-primary transition-colors outline-none focus-visible:ring-1 focus-visible:ring-primary rounded-lg truncate max-w-[70%] sm:max-w-none"
         >
           John Lester - <span className="text-primary">Portfolio</span>
         </a>

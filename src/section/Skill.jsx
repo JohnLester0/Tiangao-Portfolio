@@ -61,7 +61,7 @@ const Skills = () => {
         <span className="text-primary text-xs font-semibold tracking-[0.15em] uppercase block mb-3">
           My Toolkit
         </span>
-        <h2 className="text-4xl md:text-5xl font-bold text-secondary-foreground leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary-foreground leading-tight">
           Tools & Technologies{" "}
           <span className="font-serif italic font-normal text-white block sm:inline">
             I use in my work.

@@ -39,11 +39,11 @@ export const Hero = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight animate-fade-in animation-delay-200">
+      <div className="container mx-auto px-4 sm:px-6 pt-28 sm:pt-36 pb-16 sm:pb-24 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-200">
                 Welcome <span className="text-primary glow-text">my Friend</span>
                 <br />
                 <span className="font-serif italic font-normal text-white">
@@ -52,7 +52,7 @@ export const Hero = () => {
               </h1>
             </div>
 
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 animate-fade-in animation-delay-300">
               <a href="#contact" className="inline-block">
                 <AnimatedBorderButton>
                   <Send className="w-5 h-5" />
@@ -61,7 +61,7 @@ export const Hero = () => {
               </a>
             </div>
 
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-200">
+            <div className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in animation-delay-200">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
                 { icon: GitHubIcon, href: "https://github.com/JohnLester0" },
@@ -83,9 +83,9 @@ export const Hero = () => {
           </div>
 
           <div className="animate-fade-in animation-delay-300">
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-sm sm:max-w-md mx-auto">
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
-              <div className="w-80 h-80 sm:w-96 sm:h-96 mx-auto rounded-full overflow-hidden ring-4 ring-white/30 shadow-2xl">
+              <div className="w-60 h-60 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto rounded-full overflow-hidden ring-4 ring-white/30 shadow-2xl">
                 <img
                   src="/profile.jpg"
                   alt="John Lester"

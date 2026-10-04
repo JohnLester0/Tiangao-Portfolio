@@ -98,28 +98,28 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
-        <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
+    <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <ScrollReveal className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
             Get In Touch
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-secondary-foreground">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 text-secondary-foreground">
             Let's build{" "}
             <span className="font-serif italic font-normal text-white">
               something great.
             </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto">
             Have a project in mind? I'd love to hear about it. Send me a message
             and let's discuss how we can work together.
           </p>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           <ScrollReveal
             direction="left"
-            className="glass p-8 rounded-3xl border border-primary/30"
+            className="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-primary/30"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="animate-slide-up animation-delay-100">
@@ -217,7 +217,7 @@ export const Contact = () => {
           </ScrollReveal>
 
           <ScrollReveal direction="right" className="space-y-6" delay={150}>
-            <div className="glass rounded-3xl p-8 hover:scale-[1.02] transition-all duration-300 ease-in-out">
+            <div className="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:scale-[1.01] transition-all duration-300 ease-in-out">
               <h3 className="text-xl font-semibold mb-6 animate-slide-up">
                 Contact Information
               </h3>
