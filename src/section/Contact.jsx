@@ -116,10 +116,10 @@ export const Contact = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 max-w-5xl mx-auto items-start">
           <ScrollReveal
             direction="left"
-            className="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-primary/30"
+            className="lg:col-span-7 w-full max-w-xl mx-auto lg:max-w-none glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-primary/30"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="animate-slide-up animation-delay-100">
@@ -216,31 +216,42 @@ export const Contact = () => {
             </form>
           </ScrollReveal>
 
-          <ScrollReveal direction="right" className="space-y-6" delay={150}>
-            <div className="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:scale-[1.01] transition-all duration-300 ease-in-out">
-              <h3 className="text-xl font-semibold mb-6 animate-slide-up">
+          <ScrollReveal
+            direction="right"
+            className="lg:col-span-5 w-full max-w-xl mx-auto lg:max-w-none space-y-6"
+            delay={150}
+          >
+            <div className="glass rounded-2xl sm:rounded-3xl p-6 sm:p-7 hover:border-primary/40 transition-all duration-300 ease-in-out border border-white/[0.08]">
+              <h3 className="text-xl font-semibold mb-5 animate-slide-up text-foreground">
                 Contact Information
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {contactInfo.map((item, i) => (
                   <a
                     key={i}
                     href={item.href}
-                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface hover:scale-[1.02] transition-all duration-300 ease-in-out group hover:shadow-lg"
+                    className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-surface/50 border border-white/[0.04] hover:border-primary/40 hover:bg-surface hover:scale-[1.01] transition-all duration-300 ease-in-out group hover:shadow-lg w-full min-w-0"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 ease-in-out group-hover:scale-110">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 ease-in-out group-hover:scale-105 flex-shrink-0">
                       <item.icon className="w-5 h-5 text-primary group-hover:scale-110 transition-transform duration-300" />
                     </div>
-                    <div className="group-hover:translate-x-1 transition-transform duration-300">
-                      <div className="text-sm text-muted-foreground">
+                    <div className="min-w-0 flex-1 group-hover:translate-x-0.5 transition-transform duration-300">
+                      <div className="text-xs text-muted-foreground font-medium">
                         {item.label}
                       </div>
-                      <div className="font-medium">{item.value}</div>
+                      <div className="font-medium text-sm sm:text-base text-foreground truncate">
+                        {item.value}
+                      </div>
                     </div>
                   </a>
                 ))}
+              </div>
+
+              <div className="pt-4 mt-5 border-t border-white/[0.06] flex items-center gap-2.5 text-xs text-muted-foreground">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
+                <span className="truncate">Available for projects & freelance work</span>
               </div>
             </div>
           </ScrollReveal>
