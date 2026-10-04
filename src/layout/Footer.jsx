@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
-import { useState } from "react";
 import { GitHubIcon, LinkedInIcon } from "@/components/BrandIcons";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const socialLinks = [
   {
@@ -27,33 +27,19 @@ const footerLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
-const EMAIL = "johnlestertiangao@gmail.com";
-
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [emailCopied, setEmailCopied] = useState(false);
-
-  const handleEmailCopy = () => {
-    navigator.clipboard.writeText(EMAIL);
-    setEmailCopied(true);
-
-    setTimeout(() => {
-      setEmailCopied(false);
-    }, 2000);
-  };
 
   return (
     <footer className="py-12 border-t border-border">
-      <div className="container mx-auto px-6">
+      <ScrollReveal className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} 2nd Year IT Student.
+              © {currentYear} John Lester Tiangao. All rights reserved.
             </p>
           </div>
 
-          {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
               <a
@@ -66,10 +52,7 @@ export const Footer = () => {
             ))}
           </nav>
 
-          {/* Social Links & Email Copy */}
           <div className="flex items-center gap-4">
-            {/* Email Copy Button */}
-            {/* Social Links */}
             {socialLinks.map((social) => (
               <a
                 key={social.label}
@@ -84,7 +67,7 @@ export const Footer = () => {
             ))}
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </footer>
   );
 };

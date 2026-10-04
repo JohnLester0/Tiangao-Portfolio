@@ -54,22 +54,29 @@ export const useSmoothAnchorScroll = () => {
             target.getBoundingClientRect().top + startY - headerHeight - 20,
           );
       const distance = targetY - startY;
+      if (Math.abs(distance) < 5) return;
+
       const prefersReducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
-      const duration = prefersReducedMotion
-        ? 350
-        : Math.min(2200, Math.max(850, Math.abs(distance) * 0.75));
+
+      if (prefersReducedMotion) {
+        window.scrollTo(0, targetY);
+        return;
+      }
+
+      // Smooth cubic easing for fluid transitions when scrolling down to anchors
+      const duration = Math.min(900, Math.max(500, Math.abs(distance) * 0.45));
       let startTime;
 
       const animate = (time) => {
         startTime ??= time;
         const progress = Math.min((time - startTime) / duration, 1);
-        const easedProgress = prefersReducedMotion
-          ? 1 - Math.pow(1 - progress, 2)
-          : progress < 0.5
-            ? 16 * progress ** 5
-            : 1 - Math.pow(-2 * progress + 2, 5) / 2;
+        const easedProgress =
+          progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
         window.scrollTo(0, startY + distance * easedProgress);
 
         if (progress < 1) {
