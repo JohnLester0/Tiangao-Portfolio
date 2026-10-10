@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const bioFacts = [
-  { label: "Education", value: "BS Information & Technology, 2nd Year" },
+  { label: "Education", value: "BS Information & Technology, 3rd Year" },
   { label: "School", value: "Western Institute of Technology" },
   { label: "Senior HS", value: "Passi National High School (HUMSS)" },
   { label: "Location", value: "Passi City / Iloilo City" },
@@ -39,7 +39,7 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <ScrollReveal direction="left" className="space-y-6">
             <div>
-              <span className="text-primary text-xs font-semibold tracking-[0.15em] uppercase block mb-3">
+              <span className="text-primary text-s font-bold tracking-[0.15em] uppercase block mb-3">
                 ABOUT ME
               </span>
 

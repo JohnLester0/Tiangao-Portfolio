@@ -30,7 +30,7 @@ export const Footer = () => {
 
         {/* Follow Me */}
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <span className="text-xs font-semibold uppercase tracking-wider text-secondary-foreground">
+          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             Follow Me:
           </span>
           <div className="flex items-center gap-4">

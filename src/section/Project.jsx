@@ -9,7 +9,7 @@ const projects = [
     description:
       "A full-stack task management application utilizing a separated client-server architecture, with a streamlined UI and robust data persistence.",
     image: "/projects/Awesometodos.png",
-    link: "https://awesometodosapp-ab74.onrender.com",
+    link: "https://awesometodosapp-ab74.onrender.com/",
     github: "https://github.com/JohnLester0/awesometodosapp.git",
     tags: ["React", "Node.js", "Express", "TailwindCSS"],
   },

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/Button";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
@@ -43,54 +42,44 @@ export const Contact = () => {
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
 
+    const senderName = formData.name.trim();
+    const senderEmail = formData.email.trim();
+    const senderMessage = formData.message.trim();
+
     try {
-      // 1. Save submission to Supabase messages table
-      const { error: dbError } = await supabase.from("messages").insert([
+      const serviceId = "service_mo7poom";
+      const templateId = "template_lk6t9oe";
+      const publicKey = "nQmLK0_KqEEm4PGwM";
+
+      await emailjs.send(
+        serviceId,
+        templateId,
         {
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          message: formData.message.trim(),
+          name: senderName,
+          email: senderEmail,
+          message: senderMessage,
+          title: `Portfolio Message from ${senderName}`,
+          time: new Date().toLocaleString(),
+          from_name: senderName,
+          from_email: senderEmail,
+          reply_to: senderEmail,
         },
-      ]);
-
-      if (dbError) throw dbError;
-
-      // 2. Send instant email notification to your Gmail if EmailJS is configured
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-      if (serviceId && templateId && publicKey) {
-        try {
-          await emailjs.send(
-            serviceId,
-            templateId,
-            {
-              from_name: formData.name.trim(),
-              from_email: formData.email.trim(),
-              message: formData.message.trim(),
-              reply_to: formData.email.trim(),
-            },
-            publicKey
-          );
-        } catch (emailErr) {
-          console.warn("EmailJS notification error:", emailErr);
-          // Do not fail submission since Supabase already saved the record
-        }
-      }
+        publicKey
+      );
 
       setSubmitStatus({
         type: "success",
-        message: "Message sent and recorded successfully! I'll get back to you soon.",
+        message: "Message sent directly to my email! I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
-      console.error("Submission error:", err);
+      console.error("Email submission error:", err);
+      const errorDetail = err?.text || err?.message || "";
       setSubmitStatus({
         type: "error",
-        message:
-          err.message ||
-          "Failed to send message. Please check your Supabase table and RLS policy.",
+        message: errorDetail
+          ? `EmailJS Error: ${errorDetail}`
+          : "Could not send message right now. Please check your EmailJS Public Key.",
       });
     } finally {
       setIsLoading(false);
@@ -247,11 +236,6 @@ export const Contact = () => {
                     </div>
                   </a>
                 ))}
-              </div>
-
-              <div className="pt-4 mt-5 border-t border-white/[0.06] flex items-center gap-2.5 text-xs text-muted-foreground">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
-                <span className="truncate">Available for projects & freelance work</span>
               </div>
             </div>
           </ScrollReveal>
